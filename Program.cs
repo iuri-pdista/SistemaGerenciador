@@ -16,10 +16,10 @@ namespace Programming{
         }
         private static void Menu(){
             string MenuLog = "\nBem Vindo ao sistema gerenciador de informações"+ 
-            "\n\n Pressione >0< para SAIR" + 
+            "\n\nPressione >0< para SAIR" + 
             "\nPressione >1< para CLIENTES" + 
             "\nPressione >2< Para FUNCIONÁRIOS" + 
-            "\n Pressione >3< Para produtos";
+            "\nPressione >3< Para produtos\n\n";
             while(true){
                 Console.WriteLine(MenuLog);
                 string MenuRes = Console.ReadLine();
