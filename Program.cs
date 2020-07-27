@@ -29,7 +29,7 @@ namespace Programming{
                     Console.WriteLine("Essa funcionalidade ainda nao foi implementada");
                 }
                 else if(MenuRes == "3"){
-                    
+                    User.ListarUsers();
                 }
                   
             }
