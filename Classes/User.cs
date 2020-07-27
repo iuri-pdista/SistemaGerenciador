@@ -35,5 +35,20 @@ namespace _USERS{
                 fs.Write(info, 0, info.Length);
             }
         } 
+        public static void ListarUsers(){
+            String path = "./DB/Users.csv";
+            using (FileStream file = File.Open(path, FileMode.Open, FileAccess.Read)){
+                byte[] bytes = new byte[file.Length];
+                int BytesASeremLidos = (int)file.Length;
+                int BytesLidos = 0;
+                while (BytesASeremLidos > 0){
+                    int n = file.Read(bytes, BytesLidos, BytesASeremLidos);
+                    if (n == 0) break;
+                    BytesLidos += n;
+                    BytesASeremLidos -= n;
+                }
+                Console.WriteLine(bytes.ToString());
+            }
+        }
     }
 }    
